@@ -55,6 +55,7 @@ namespace Server
             Backend.Start();
             MainServer.Start();
             StatusServer.Start();
+            PlayerServer.Start();
             TeamDeathMatchServerLogic.Start();
         }
 
@@ -62,6 +63,7 @@ namespace Server
         {
             Log.Print("Stopping team death match mode...");
             StatusServer.Stop();
+            PlayerServer.Stop();
             MainServer.Stop();
             Backend.Stop();
             TeamDeathMatchServerLogic.Stop();

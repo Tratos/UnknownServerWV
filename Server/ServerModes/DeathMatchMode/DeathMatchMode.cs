@@ -40,6 +40,7 @@ namespace Server
             Backend.Start();
             MainServer.Start();
             StatusServer.Start();
+            PlayerServer.Start();
             DeathMatchServerLogic.Start();
         }
 
@@ -47,6 +48,7 @@ namespace Server
         {
             Log.Print("Stopping death match mode...");
             StatusServer.Stop();
+            PlayerServer.Stop();
             MainServer.Stop();
             Backend.Stop();
             DeathMatchServerLogic.Stop();

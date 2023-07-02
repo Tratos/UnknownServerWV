@@ -50,12 +50,14 @@ namespace Server
             Backend.Start();
             MainServer.Start();
             StatusServer.Start();
+            PlayerServer.Start();
             BattleRoyaleServerLogic.Start();
         }
         public static void Stop()
         {
             Log.Print("Stopping battle royale mode...");
             StatusServer.Stop();
+            PlayerServer.Stop();
             MainServer.Stop();
             Backend.Stop();
             BattleRoyaleServerLogic.Stop();

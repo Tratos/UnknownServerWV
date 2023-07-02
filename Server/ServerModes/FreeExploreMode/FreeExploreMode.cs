@@ -44,6 +44,7 @@ namespace Server
             Backend.Start();
             MainServer.Start();
             StatusServer.Start();
+            PlayerServer.Start();
             FreeExploreServerLogic.Start();
         }
 
@@ -51,6 +52,7 @@ namespace Server
         {
             Log.Print("Stopping free explore mode...");
             StatusServer.Stop();
+            PlayerServer.Stop();
             MainServer.Stop();
             Backend.Stop();
             FreeExploreServerLogic.Stop();
